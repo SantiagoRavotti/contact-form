@@ -1,52 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- due this is just an example and the results are not stored into a server we use method "GET" -->
-    <form action="results.html" method="GET">
-        <h1>CONTACT US</h1>
-        <p>Follow and fill this quick form to get our Newsletters and offers. It will take only 1 minute.</p>    
-        <!-- we add the input for the name, email and age -->
-        <div>
-            <input type="text" name="Name" id="name" placeholder="Your Fullname" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Source+Sans+Pro:ital,wght@1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            
+            <!-- due this is just an example and the results are not stored into a server we use method "GET" -->
+            <form action="results.html" method="GET">
+                <h1>CONTACT US</h1>
+                <p>Follow and fill this quick form to get our Newsletters and offers. It will take only 1 minute.</p>    
+                <!-- we add the input for the name, email and age -->
+                <div>
+                    <input type="text" name="Name" id="name" placeholder="Your Fullname" required>
+                </div>
+                <div>
+                    <input type="email" name="Email" id="email" placeholder="Your Email" required>
+                </div>
+                <div>
+                    <input type="number" name="Age" placeholder="Your Age" id="age" min="1" max="200">
+                </div>
+                <!-- checkbox added -->
+                <div class="undertext">
+                    <label for="agree">Agree With Users Conditions</label>
+                    <input type="checkbox" name="agree" id="agree" required>
+                </div>  
+                <!-- finally we add the reset and submit button -->
+                <input type="reset"></input>
+                <input type="submit"></input>
+            </form>
+            <img src="books-background.jpg" alt="books-background">
+            <button><a href="#">Back to Form</a></button>
         </div>
-        <div>
-            <input type="email" name="Email" id="email" placeholder="Your Email" required>
-        </div>
-        <div>
-        
-            <input type="number" name="Age" placeholder="Your Age" id="age" min="1" max="200">
-        </div>
-        <!-- we add the to selectors for gender and kind of contact -->
-        <div>
-            <label for="selectGender">Gender:</label>
-            <select name="selectGender" class="selectGender select">
-                <option value="Female">Female</option>
-                <option label="Male" value="Male"></option>
-                <option value="Other">Other</option>
-            </select>
-        </div> 
-        <div>
-            <label for="selectNews">I want to receive:</label>
-            <select name="selectNews" class="selectNews select">
-                <option value="Newsletter">Newsletter</option>
-                <option label="Offers" value="Offers"></option>
-                <option value="both">Both</option>
-            </select>
-        </div> 
-        <!-- checkbox added -->
-        <div class="undertext">
-            <label for="agree">Agree With Users Conditions</label>
-            <input type="checkbox" name="agree" id="agree" required>
-        </div>  
-        <!-- finally we add the reset and submit button -->
-            <input type="reset"></input>
-            <input type="submit"></input>
-    </form>
-</body>
+    </body>
 </html>
